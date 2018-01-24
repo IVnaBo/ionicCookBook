@@ -1,0 +1,63 @@
+<!--
+  Generated template for the CategoryPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" style="opacity: 0.8">
+    <ion-title>分类</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div *ngIf="!searchResultShow">
+
+
+    <ion-searchbar placeholder="搜搜看..." (ionInput)="onInput($event)" [(ngModel)]="searchTxt"></ion-searchbar>
+    <div>
+      <ion-icon name="flame" color="danger"></ion-icon>
+      <span>大家都在搜</span>
+    </div>
+    <ng-container *ngFor="let item of chipData">
+      <ion-chip color="danger" (click)="chipItemClick(item)">{{item}}</ion-chip>
+    </ng-container>
+
+    <div>
+      <ion-icon name="flame" color="danger"></ion-icon>
+      <span>热门分类</span>
+    </div>
+
+    <!-- Generated template for the CookProductsComponent component -->
+    <div>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-4 *ngFor="let item of categories">
+            <!--<img src="{{item.BookIconOtherURL}}">-->
+            <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+            <!--<span class="cook_title" style="text-align: center">{{item.BookName}}</span>-->
+            <ion-card (click)="categoryClick(item)">
+              <img src="{{item.CatalogOtherURL}}">
+              <div class="place_v"></div>
+              <ion-card-content>
+                <p>{{item.CatalogName}}</p>
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+  </div>
+
+  <div class="search_result" *ngIf="searchResultShow">
+      <ion-list>
+        <ion-item *ngFor="let item of searchResultList">{{item}}</ion-item>
+      </ion-list>
+  </div>
+
+
+</ion-content>

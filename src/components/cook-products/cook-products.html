@@ -1,0 +1,19 @@
+<!-- Generated template for the CookProductsComponent component -->
+<div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4 *ngFor="let item of categories" (click)="cookStep(item)" >
+        <!--<img src="{{item.BookIconOtherURL}}">-->
+        <!--&lt;!&ndash;<div></div>&ndash;&gt;-->
+        <!--<span class="cook_title" style="text-align: center">{{item.BookName}}</span>-->
+        <ion-card >
+          <img src="{{item.BookIconOtherURL}}">
+          <div class="place_v"></div>
+          <ion-card-content>
+            <p>{{item.BookName}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>

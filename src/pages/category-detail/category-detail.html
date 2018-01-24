@@ -1,0 +1,29 @@
+<!--
+  Generated template for the CategoryDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary" style="opacity: 0.8">
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row *ngIf="spinner1">
+    <ion-col text-center>
+      <ion-spinner class="spinner-energized" name="bubbles"></ion-spinner>
+    </ion-col>
+  </ion-row>
+  <div>
+    <cook-products [categories]="categories"></cook-products>
+  </div>
+  <!-- 加载更多..... -->
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

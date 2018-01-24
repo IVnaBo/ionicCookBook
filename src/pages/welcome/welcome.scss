@@ -1,0 +1,24 @@
+page-welcome {
+
+  ion-slide {
+    background-color: #eeeeee;
+  }
+
+  //ion-slide img {
+  //  height: 70vh !important;
+  //  width: auto !important;
+  //}
+  .slider_end{
+    position: relative;
+    img{
+
+
+
+    }
+    button{
+      position: absolute;
+      left: 40%;
+      bottom: 45px;
+    }
+  }
+}

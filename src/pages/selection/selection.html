@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar  style="opacity: 0.8" no-border-bottom color="primary">
+    <ion-title>精选</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content fullscreen>
+
+  <ion-row *ngIf="spinner1">
+    <ion-col text-center>
+      <ion-spinner class="spinner-energized" name="bubbles"></ion-spinner>
+    </ion-col>
+  </ion-row>
+  <!-- 轮播图 -->
+  <!--#ionSlides paginationType="progress" autoplay="2000" loop=true pager=true-->
+  <ion-slides >
+    <ion-slide *ngFor="let item of slides" tappable (click)="goDetails(item)">
+      <img src="{{item.TopicIconUrl}}" alt="">
+      <div class="cover"></div>
+      <span class="title">{{item.TopicName}}</span>
+    </ion-slide>
+  </ion-slides>
+  <!-- 组件化 代码封装 更加整洁 -->
+  <div>
+    <cook-products [categories]="categories"></cook-products>
+  </div>
+  <!-- 加载更多..... -->
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+
+</ion-content>
+

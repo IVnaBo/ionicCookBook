@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      个人中心
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="toSettingPage()">设置</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content fullscreen>
+
+  <!--<div class="icon-car iconfont" color="primary" style="font-size: 32px;height: 36px;margin: 10px"></div>-->
+
+
+    <div class="head_back">
+      <!--<img src="../../assets/imgs/u4.png" class="head_back_img">-->
+      <div class="placehoderv"></div>
+      <img src="assets/imgs/socute.png" tappable class="head_icon" (click)="takePhoto($event)">
+      <p>133谁吖</p>
+    </div>
+
+    <ion-grid class="head_grid">
+      <ion-row wrap>
+        <ion-col col-4>
+          <img src="assets/imgs/u113.png">
+          <p>我的订单</p>
+        </ion-col>
+        <ion-col col-4>
+          <img src="assets/imgs/u115.png">
+          <p>我的购物车</p>
+        </ion-col>
+        <ion-col col-4>
+          <img src="assets/imgs/u117.png">
+          <p>我的售后</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <button ion-button (click)="toChartsPage()">图表页</button>
+
+  <button ion-button (click)="getLocation()">测试定位</button>
+
+
+
+
+
+
+
+
+
+</ion-content>

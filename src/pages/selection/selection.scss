@@ -1,0 +1,27 @@
+page-selection {
+
+  ion-slides {
+    height: 30%;
+    .cover {
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 20px;
+      background: linear-gradient(to right, #673743, #f9537d);
+      opacity: 0.6;
+    }
+
+    .title {
+      position: absolute;
+      bottom: 0px;
+      width: 90%;
+      height: 20px;
+      line-height: 20px;
+      font-size: 60%;
+      left: 5px;
+      text-align: center;
+      color: white;
+    }
+  }
+
+}
