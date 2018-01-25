@@ -20,6 +20,9 @@
 
 存在的问题 安卓打包 之前是可以的。现在一直提示插件找不到，但是我把插件删除又重新导入还是不行。
 
+
+一些native 功能 是必须要打包成壳子之后才能测试的，之前选取照片的时候 直接在浏览器上运行。 还去问同事，这是怎么回事 haha
+
 附上截图一张
 
 [首页](https://github.com/IVnaBo/ionicCookBook/blob/master/3af1bb58-ec23-4fcc-8a2c-a540b0792cac.jpg)
